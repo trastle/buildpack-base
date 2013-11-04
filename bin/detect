@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# -----------------------------------------------------------------------------
+# The detect script is used to determine whether or not to apply the buildpack
+# to an application. The script is called with one argument, the build directory 
+# for the application. It returns an exit code of 0 if the application can be 
+# supported by the buildpack. If the script does return 0, it should also print 
+# a framework name to STDOUT.
+#
+# http://docs.cloudfoundry.com/docs/using/deploying-apps/custom-buildpacks.html
+# -----------------------------------------------------------------------------
+
+RC_OK=0
+RC_FAIL=1
+
+function main {
+    echo "BuildpackName"
+    exit $RC_OK
+}
+
+main

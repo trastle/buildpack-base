@@ -13,10 +13,6 @@ function main
 {
 cat << EOF
 ---
-config_vars:
-  sample_var: banana
-default_process_type:
-  web: bundle exec rackup config.ru -p $PORT
 EOF
 
 }

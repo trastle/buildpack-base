@@ -16,12 +16,12 @@
 BUILD_PATH="$1"
 CACHE_PATH="$2"
 
-function main{
+function main {
 
-     cd $BUILD_PATH
+     cd "$BUILD_PATH"
      echo "A file here" > "build.txt"
 
-     cd $CACHE_PATH
+     cd "$CACHE_PATH"
      echo "A file here" > "cache.txt"
 
 }

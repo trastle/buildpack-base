@@ -1,2 +1,24 @@
 #!/bin/bash
 
+# -----------------------------------------------------------------------------
+# The release script provides feedback metadata back to Cloud Foundry 
+# indicating how the application should be executed. The script is run with one 
+# argument, the build location of the application. The script must generate a 
+# YAML file in the following format:
+# -----------------------------------------------------------------------------
+
+BUILD_DIR="$1"
+
+function main 
+{
+cat << EOF
+---
+config_vars:
+  sample_var: banana
+default_process_type:
+  web: bundle exec rackup config.ru -p $PORT
+EOF
+
+}
+
+main
